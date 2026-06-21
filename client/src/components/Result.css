@@ -1,0 +1,55 @@
+.result-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.result-header { display: flex; gap: 2rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.result-stats { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 10px; }
+
+.skill-bar-row { display: flex; align-items: center; gap: 10px; }
+.skill-bar-label { color: #aaa; font-size: 0.8rem; width: 70px; flex-shrink: 0; }
+.skill-bar-track { flex: 1; height: 8px; background: #1a1a2e; border-radius: 10px; overflow: hidden; }
+.skill-bar-fill { height: 100%; border-radius: 10px; transition: width 1s ease; }
+.skill-bar-val { color: #666; font-size: 0.75rem; width: 35px; text-align: right; flex-shrink: 0; }
+
+.score-badge { margin-top: 6px; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; color: #000; display: inline-block; width: fit-content; }
+
+.result-tabs { display: flex; gap: 8px; border-bottom: 1px solid #1a1a2e; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.result-tab { background: transparent; border: none; color: #555; padding: 10px 18px; cursor: pointer; font-size: 0.85rem; font-weight: 600; border-bottom: 2px solid transparent; transition: all 0.2s ease; }
+.result-tab:hover { color: #aaa; }
+.result-tab.active { color: #00f5a0; border-bottom-color: #00f5a0; }
+
+.tab-content { animation: fadeIn 0.3s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.overview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+@media (max-width: 600px) { .overview-grid { grid-template-columns: repeat(2, 1fr); } .result-header { flex-direction: column; } }
+
+.overview-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1rem; text-align: center; }
+.ov-label { color: #666; font-size: 0.75rem; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 1px; }
+.ov-value { font-size: 2rem; font-weight: 800; margin: 0; }
+
+.section { margin-bottom: 1.5rem; }
+.section h3 { color: #aaa; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.75rem; font-weight: 600; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: default; transition: transform 0.2s; }
+.tag:hover { transform: translateY(-2px); }
+.tag-skill { background: rgba(0,245,160,0.1); color: #00f5a0; border: 1px solid rgba(0,245,160,0.2); }
+.tag-exp   { background: rgba(167,139,250,0.1); color: #a78bfa; border: 1px solid rgba(167,139,250,0.2); }
+.tag-edu   { background: rgba(245,158,11,0.1); color: #f59e0b; border: 1px solid rgba(245,158,11,0.2); }
+
+.empty { color: #444; font-size: 0.85rem; font-style: italic; }
+
+.suggestions-box { display: flex; flex-direction: column; gap: 12px; }
+.suggestion-item { display: flex; align-items: flex-start; gap: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(0,245,160,0.1); border-radius: 12px; padding: 14px 16px; transition: all 0.2s; }
+.suggestion-item:hover { border-color: rgba(0,245,160,0.3); background: rgba(0,245,160,0.04); transform: translateX(4px); }
+.suggestion-num { background: linear-gradient(135deg, #00f5a0, #00d9f5); color: #000; font-weight: 800; font-size: 0.75rem; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.suggestion-item p { color: #ccc; font-size: 0.88rem; margin: 0; line-height: 1.5; }
