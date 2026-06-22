@@ -24,11 +24,7 @@ export default function Landing({ onLogin, onRegister }) {
       </nav>
 
       <section style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "5rem 2rem 3rem", gap: "1.5rem" }}>
-        <div className="fade-up" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(124,58,237,0.1)", border: "1px solid rgba(167,139,250,0.25)", borderRadius: 20, padding: "6px 16px", fontSize: "0.8rem", color: "#a78bfa", animation: "glow-pulse 3s ease infinite" }}>
-          <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#a78bfa", display: "inline-block", animation: "pulse 2s ease infinite" }} />
-          Powered by Groq AI · Llama 3.3 70B
-        </div>
-
+    
         <h1 className="fade-up font-display" style={{ fontSize: "clamp(2.8rem,7vw,5rem)", fontWeight: 900, lineHeight: 1.05, maxWidth: 800, animationDelay: "0.1s" }}>
           Get Your Resume<br />
           <span className="gradient-text">ATS-Ready</span> in Seconds
